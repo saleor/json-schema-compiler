@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		/* Visit https://aka.ms/tsconfig to read more about this file */
+
+		/* Projects */
+		"incremental": true /* Save .tsbuildinfo files to allow for incremental compilation of projects. */,
+		"target": "ES2022" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+		"module": "NodeNext" /* Specify what module code is generated. */,
+		"moduleResolution": "Node",
+		"importHelpers": false,
+
+		/* Interop Constraints */
+		"isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
+		"esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+
+		/* Type Checking */
+		"strict": true /* Enable all strict type-checking options. */,
+		"allowUnreachableCode": true /* Disable error reporting for unreachable code. */,
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
+		"resolveJsonModule": true
+	}
+}
