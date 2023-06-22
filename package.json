@@ -2,7 +2,13 @@
 	"name": "@saleor/json-schema-compiler",
 	"version": "0.0.0",
 	"description": "",
-	"bin": "./dist/index.js",
+	"main": "./dist/index.js",
+	"bin": {
+		"@saleor/schema-compiler": "./dist/index.js"
+	},
+	"repository": "github:saleor/json-schema-compiler",
+	"homepage": "https://github.com/saleor/json-schema-compiler#readme",
+	"bugs": "https://github.com/saleor/json-schema-compiler/issues",
 	"scripts": {
 		"dev": "pnpm _base --source-map --watch",
 		"build": "pnpm _base --minify",
@@ -10,7 +16,9 @@
 		"test": "vitest",
 		"lint": "eslint --cache --fix src",
 		"lint:ci": "eslint --cache src",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"clean": "rm -rf dist",
+		"prepublishOnly": "pnpm clean && pnpm build"
 	},
 	"keywords": [],
 	"author": "Michał Miszczyszyn <michal@mmiszy.pl> (https://typeofweb.com/)",
@@ -29,6 +37,7 @@
 		"husky": "8.0.3",
 		"lint-staged": "13.2.2",
 		"prettier": "2.8.8",
+		"release-it": "15.11.0",
 		"typescript": "5.1.3",
 		"vitest": "0.32.2"
 	},
@@ -39,5 +48,8 @@
 		"commander": "11.0.0",
 		"figlet": "1.6.0",
 		"json-schema-to-typescript": "13.0.2"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
