@@ -6,6 +6,7 @@
 		"autoGenerate": true
 	},
 	"npm": {
-		"publish": true
+		"publish": true,
+		"pnpm": true
 	}
 }

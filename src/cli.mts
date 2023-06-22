@@ -15,7 +15,7 @@ console.log(`
 
 const program = new Command();
 
-program.name("@saleor/json-schema-compiler").version(Pkg.version);
+program.name("saleor-schema-compiler").version(Pkg.version);
 
 program
 	.command("compile")

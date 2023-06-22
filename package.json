@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "./dist/index.js",
 	"bin": {
-		"@saleor/schema-compiler": "./dist/index.js"
+		"saleor-schema-compiler": "./dist/index.js"
 	},
 	"repository": "github:saleor/json-schema-compiler",
 	"homepage": "https://github.com/saleor/json-schema-compiler#readme",
