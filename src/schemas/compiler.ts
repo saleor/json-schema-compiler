@@ -13,6 +13,10 @@ const getAjvForCodegen = (definitionsJson?: AnySchema) => {
 			esm: true,
 			optimize: true,
 		},
+		loadSchema(uri) {
+			// @todo is this safe?
+			return fetch(uri).then((res) => res.json() as Promise<AnySchemaObject>);
+		},
 	});
 	if (definitionsJson) {
 		ajv.addSchema(definitionsJson);
@@ -45,7 +49,7 @@ export async function compileSchemaToJs(
 	definitionsJson?: AnySchema,
 ) {
 	const ajv = getAjvForCodegen(definitionsJson);
-	const validate = ajv.compile(schema as AnySchemaObject);
+	const validate = await ajv.compileAsync(schema as AnySchemaObject);
 	const sourceCode = AjvStandalone.default(ajv, validate);
 	return `/* c8 ignore start */\n` + sourceCode;
 }
