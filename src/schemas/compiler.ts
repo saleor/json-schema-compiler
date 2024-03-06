@@ -8,6 +8,7 @@ type JSONSchema4 = Parameters<typeof compile>[0];
 
 const getAjvForCodegen = (definitionsJson?: AnySchema) => {
 	const ajv = getAjv({
+		// coerceTypes: true,
 		code: {
 			source: true,
 			esm: true,

@@ -1,4 +1,5 @@
 import { expect, describe, it } from "vitest";
+import * as Prettier from "prettier";
 import { compileSchemaToJs, compileSchemaToTypes } from "./compiler";
 
 const exampleSchema = {
@@ -28,7 +29,9 @@ const exampleSchema = {
 describe("JSON schema compiler", () => {
 	describe(`compileSchemaToJs`, () => {
 		it(`compileSchemaToJs compiles schema to JS code`, async () => {
-			expect(await compileSchemaToJs("SchemaName", exampleSchema)).toMatchSnapshot();
+			const resultCode = await compileSchemaToJs("SchemaName", exampleSchema);
+			const formattedCode = Prettier.format(resultCode, { parser: "typescript" });
+			expect(formattedCode).toMatchSnapshot();
 		});
 	});
 
