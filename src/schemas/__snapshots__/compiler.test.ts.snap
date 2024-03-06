@@ -67,18 +67,35 @@ function validate10(
         return false;
       } else {
         if (data.pspReference !== undefined) {
+          let data0 = data.pspReference;
           const _errs1 = errors;
-          if (typeof data.pspReference !== \\"string\\") {
-            validate10.errors = [
-              {
-                instancePath: instancePath + \\"/pspReference\\",
-                schemaPath: \\"#/properties/pspReference/type\\",
-                keyword: \\"type\\",
-                params: { type: \\"string\\" },
-                message: \\"must be string\\",
-              },
-            ];
-            return false;
+          if (typeof data0 !== \\"string\\") {
+            let dataType0 = typeof data0;
+            let coerced0 = undefined;
+            if (!(coerced0 !== undefined)) {
+              if (dataType0 == \\"number\\" || dataType0 == \\"boolean\\") {
+                coerced0 = \\"\\" + data0;
+              } else if (data0 === null) {
+                coerced0 = \\"\\";
+              } else {
+                validate10.errors = [
+                  {
+                    instancePath: instancePath + \\"/pspReference\\",
+                    schemaPath: \\"#/properties/pspReference/type\\",
+                    keyword: \\"type\\",
+                    params: { type: \\"string\\" },
+                    message: \\"must be string\\",
+                  },
+                ];
+                return false;
+              }
+            }
+            if (coerced0 !== undefined) {
+              data0 = coerced0;
+              if (data !== undefined) {
+                data[\\"pspReference\\"] = coerced0;
+              }
+            }
           }
           var valid0 = _errs1 === errors;
         } else {
@@ -115,19 +132,35 @@ function validate10(
               let valid1 = false;
               const _errs8 = errors;
               if (typeof data2 !== \\"string\\") {
-                const err0 = {
-                  instancePath: instancePath + \\"/result\\",
-                  schemaPath: \\"#/properties/result/anyOf/0/type\\",
-                  keyword: \\"type\\",
-                  params: { type: \\"string\\" },
-                  message: \\"must be string\\",
-                };
-                if (vErrors === null) {
-                  vErrors = [err0];
-                } else {
-                  vErrors.push(err0);
+                let dataType1 = typeof data2;
+                let coerced1 = undefined;
+                if (!(coerced1 !== undefined)) {
+                  if (dataType1 == \\"number\\" || dataType1 == \\"boolean\\") {
+                    coerced1 = \\"\\" + data2;
+                  } else if (data2 === null) {
+                    coerced1 = \\"\\";
+                  } else {
+                    const err0 = {
+                      instancePath: instancePath + \\"/result\\",
+                      schemaPath: \\"#/properties/result/anyOf/0/type\\",
+                      keyword: \\"type\\",
+                      params: { type: \\"string\\" },
+                      message: \\"must be string\\",
+                    };
+                    if (vErrors === null) {
+                      vErrors = [err0];
+                    } else {
+                      vErrors.push(err0);
+                    }
+                    errors++;
+                  }
                 }
-                errors++;
+                if (coerced1 !== undefined) {
+                  data2 = coerced1;
+                  if (data !== undefined) {
+                    data[\\"result\\"] = coerced1;
+                  }
+                }
               }
               if (\\"CHARGE_SUCCESS\\" !== data2) {
                 const err1 = {
@@ -149,19 +182,35 @@ function validate10(
               if (!valid1) {
                 const _errs10 = errors;
                 if (typeof data2 !== \\"string\\") {
-                  const err2 = {
-                    instancePath: instancePath + \\"/result\\",
-                    schemaPath: \\"#/properties/result/anyOf/1/type\\",
-                    keyword: \\"type\\",
-                    params: { type: \\"string\\" },
-                    message: \\"must be string\\",
-                  };
-                  if (vErrors === null) {
-                    vErrors = [err2];
-                  } else {
-                    vErrors.push(err2);
+                  let dataType2 = typeof data2;
+                  let coerced2 = undefined;
+                  if (!(coerced2 !== undefined)) {
+                    if (dataType2 == \\"number\\" || dataType2 == \\"boolean\\") {
+                      coerced2 = \\"\\" + data2;
+                    } else if (data2 === null) {
+                      coerced2 = \\"\\";
+                    } else {
+                      const err2 = {
+                        instancePath: instancePath + \\"/result\\",
+                        schemaPath: \\"#/properties/result/anyOf/1/type\\",
+                        keyword: \\"type\\",
+                        params: { type: \\"string\\" },
+                        message: \\"must be string\\",
+                      };
+                      if (vErrors === null) {
+                        vErrors = [err2];
+                      } else {
+                        vErrors.push(err2);
+                      }
+                      errors++;
+                    }
                   }
-                  errors++;
+                  if (coerced2 !== undefined) {
+                    data2 = coerced2;
+                    if (data !== undefined) {
+                      data[\\"result\\"] = coerced2;
+                    }
+                  }
                 }
                 if (\\"CHARGE_FAILURE\\" !== data2) {
                   const err3 = {
@@ -183,19 +232,35 @@ function validate10(
                 if (!valid1) {
                   const _errs12 = errors;
                   if (typeof data2 !== \\"string\\") {
-                    const err4 = {
-                      instancePath: instancePath + \\"/result\\",
-                      schemaPath: \\"#/properties/result/anyOf/2/type\\",
-                      keyword: \\"type\\",
-                      params: { type: \\"string\\" },
-                      message: \\"must be string\\",
-                    };
-                    if (vErrors === null) {
-                      vErrors = [err4];
-                    } else {
-                      vErrors.push(err4);
+                    let dataType3 = typeof data2;
+                    let coerced3 = undefined;
+                    if (!(coerced3 !== undefined)) {
+                      if (dataType3 == \\"number\\" || dataType3 == \\"boolean\\") {
+                        coerced3 = \\"\\" + data2;
+                      } else if (data2 === null) {
+                        coerced3 = \\"\\";
+                      } else {
+                        const err4 = {
+                          instancePath: instancePath + \\"/result\\",
+                          schemaPath: \\"#/properties/result/anyOf/2/type\\",
+                          keyword: \\"type\\",
+                          params: { type: \\"string\\" },
+                          message: \\"must be string\\",
+                        };
+                        if (vErrors === null) {
+                          vErrors = [err4];
+                        } else {
+                          vErrors.push(err4);
+                        }
+                        errors++;
+                      }
                     }
-                    errors++;
+                    if (coerced3 !== undefined) {
+                      data2 = coerced3;
+                      if (data !== undefined) {
+                        data[\\"result\\"] = coerced3;
+                      }
+                    }
                   }
                   if (\\"CHARGE_REQUESTED\\" !== data2) {
                     const err5 = {
@@ -217,19 +282,35 @@ function validate10(
                   if (!valid1) {
                     const _errs14 = errors;
                     if (typeof data2 !== \\"string\\") {
-                      const err6 = {
-                        instancePath: instancePath + \\"/result\\",
-                        schemaPath: \\"#/properties/result/anyOf/3/type\\",
-                        keyword: \\"type\\",
-                        params: { type: \\"string\\" },
-                        message: \\"must be string\\",
-                      };
-                      if (vErrors === null) {
-                        vErrors = [err6];
-                      } else {
-                        vErrors.push(err6);
+                      let dataType4 = typeof data2;
+                      let coerced4 = undefined;
+                      if (!(coerced4 !== undefined)) {
+                        if (dataType4 == \\"number\\" || dataType4 == \\"boolean\\") {
+                          coerced4 = \\"\\" + data2;
+                        } else if (data2 === null) {
+                          coerced4 = \\"\\";
+                        } else {
+                          const err6 = {
+                            instancePath: instancePath + \\"/result\\",
+                            schemaPath: \\"#/properties/result/anyOf/3/type\\",
+                            keyword: \\"type\\",
+                            params: { type: \\"string\\" },
+                            message: \\"must be string\\",
+                          };
+                          if (vErrors === null) {
+                            vErrors = [err6];
+                          } else {
+                            vErrors.push(err6);
+                          }
+                          errors++;
+                        }
                       }
-                      errors++;
+                      if (coerced4 !== undefined) {
+                        data2 = coerced4;
+                        if (data !== undefined) {
+                          data[\\"result\\"] = coerced4;
+                        }
+                      }
                     }
                     if (\\"AUTHORIZATION_SUCCESS\\" !== data2) {
                       const err7 = {
@@ -251,19 +332,35 @@ function validate10(
                     if (!valid1) {
                       const _errs16 = errors;
                       if (typeof data2 !== \\"string\\") {
-                        const err8 = {
-                          instancePath: instancePath + \\"/result\\",
-                          schemaPath: \\"#/properties/result/anyOf/4/type\\",
-                          keyword: \\"type\\",
-                          params: { type: \\"string\\" },
-                          message: \\"must be string\\",
-                        };
-                        if (vErrors === null) {
-                          vErrors = [err8];
-                        } else {
-                          vErrors.push(err8);
+                        let dataType5 = typeof data2;
+                        let coerced5 = undefined;
+                        if (!(coerced5 !== undefined)) {
+                          if (dataType5 == \\"number\\" || dataType5 == \\"boolean\\") {
+                            coerced5 = \\"\\" + data2;
+                          } else if (data2 === null) {
+                            coerced5 = \\"\\";
+                          } else {
+                            const err8 = {
+                              instancePath: instancePath + \\"/result\\",
+                              schemaPath: \\"#/properties/result/anyOf/4/type\\",
+                              keyword: \\"type\\",
+                              params: { type: \\"string\\" },
+                              message: \\"must be string\\",
+                            };
+                            if (vErrors === null) {
+                              vErrors = [err8];
+                            } else {
+                              vErrors.push(err8);
+                            }
+                            errors++;
+                          }
                         }
-                        errors++;
+                        if (coerced5 !== undefined) {
+                          data2 = coerced5;
+                          if (data !== undefined) {
+                            data[\\"result\\"] = coerced5;
+                          }
+                        }
                       }
                       if (\\"AUTHORIZATION_FAILURE\\" !== data2) {
                         const err9 = {
@@ -285,19 +382,38 @@ function validate10(
                       if (!valid1) {
                         const _errs18 = errors;
                         if (typeof data2 !== \\"string\\") {
-                          const err10 = {
-                            instancePath: instancePath + \\"/result\\",
-                            schemaPath: \\"#/properties/result/anyOf/5/type\\",
-                            keyword: \\"type\\",
-                            params: { type: \\"string\\" },
-                            message: \\"must be string\\",
-                          };
-                          if (vErrors === null) {
-                            vErrors = [err10];
-                          } else {
-                            vErrors.push(err10);
+                          let dataType6 = typeof data2;
+                          let coerced6 = undefined;
+                          if (!(coerced6 !== undefined)) {
+                            if (
+                              dataType6 == \\"number\\" ||
+                              dataType6 == \\"boolean\\"
+                            ) {
+                              coerced6 = \\"\\" + data2;
+                            } else if (data2 === null) {
+                              coerced6 = \\"\\";
+                            } else {
+                              const err10 = {
+                                instancePath: instancePath + \\"/result\\",
+                                schemaPath: \\"#/properties/result/anyOf/5/type\\",
+                                keyword: \\"type\\",
+                                params: { type: \\"string\\" },
+                                message: \\"must be string\\",
+                              };
+                              if (vErrors === null) {
+                                vErrors = [err10];
+                              } else {
+                                vErrors.push(err10);
+                              }
+                              errors++;
+                            }
                           }
-                          errors++;
+                          if (coerced6 !== undefined) {
+                            data2 = coerced6;
+                            if (data !== undefined) {
+                              data[\\"result\\"] = coerced6;
+                            }
+                          }
                         }
                         if (\\"AUTHORIZATION_REQUESTED\\" !== data2) {
                           const err11 = {
@@ -355,6 +471,36 @@ function validate10(
               if (data.amount !== undefined) {
                 let data3 = data.amount;
                 const _errs20 = errors;
+                if (!(typeof data3 == \\"number\\" && isFinite(data3))) {
+                  let dataType7 = typeof data3;
+                  let coerced7 = undefined;
+                  if (!(coerced7 !== undefined)) {
+                    if (
+                      dataType7 == \\"boolean\\" ||
+                      data3 === null ||
+                      (dataType7 == \\"string\\" && data3 && data3 == +data3)
+                    ) {
+                      coerced7 = +data3;
+                    } else {
+                      validate10.errors = [
+                        {
+                          instancePath: instancePath + \\"/amount\\",
+                          schemaPath: \\"#/properties/amount/type\\",
+                          keyword: \\"type\\",
+                          params: { type: \\"number\\" },
+                          message: \\"must be number\\",
+                        },
+                      ];
+                      return false;
+                    }
+                  }
+                  if (coerced7 !== undefined) {
+                    data3 = coerced7;
+                    if (data !== undefined) {
+                      data[\\"amount\\"] = coerced7;
+                    }
+                  }
+                }
                 if (errors === _errs20) {
                   if (typeof data3 == \\"number\\" && isFinite(data3)) {
                     if (data3 < 0 || isNaN(data3)) {
@@ -369,17 +515,6 @@ function validate10(
                       ];
                       return false;
                     }
-                  } else {
-                    validate10.errors = [
-                      {
-                        instancePath: instancePath + \\"/amount\\",
-                        schemaPath: \\"#/properties/amount/type\\",
-                        keyword: \\"type\\",
-                        params: { type: \\"number\\" },
-                        message: \\"must be number\\",
-                      },
-                    ];
-                    return false;
                   }
                 }
                 var valid0 = _errs20 === errors;
@@ -390,6 +525,34 @@ function validate10(
                 if (data.time !== undefined) {
                   let data4 = data.time;
                   const _errs22 = errors;
+                  if (typeof data4 !== \\"string\\") {
+                    let dataType8 = typeof data4;
+                    let coerced8 = undefined;
+                    if (!(coerced8 !== undefined)) {
+                      if (dataType8 == \\"number\\" || dataType8 == \\"boolean\\") {
+                        coerced8 = \\"\\" + data4;
+                      } else if (data4 === null) {
+                        coerced8 = \\"\\";
+                      } else {
+                        validate10.errors = [
+                          {
+                            instancePath: instancePath + \\"/time\\",
+                            schemaPath: \\"#/properties/time/type\\",
+                            keyword: \\"type\\",
+                            params: { type: \\"string\\" },
+                            message: \\"must be string\\",
+                          },
+                        ];
+                        return false;
+                      }
+                    }
+                    if (coerced8 !== undefined) {
+                      data4 = coerced8;
+                      if (data !== undefined) {
+                        data[\\"time\\"] = coerced8;
+                      }
+                    }
+                  }
                   if (errors === _errs22) {
                     if (errors === _errs22) {
                       if (typeof data4 === \\"string\\") {
@@ -406,17 +569,6 @@ function validate10(
                           ];
                           return false;
                         }
-                      } else {
-                        validate10.errors = [
-                          {
-                            instancePath: instancePath + \\"/time\\",
-                            schemaPath: \\"#/properties/time/type\\",
-                            keyword: \\"type\\",
-                            params: { type: \\"string\\" },
-                            message: \\"must be string\\",
-                          },
-                        ];
-                        return false;
                       }
                     }
                   }
@@ -426,18 +578,35 @@ function validate10(
                 }
                 if (valid0) {
                   if (data.externalUrl !== undefined) {
+                    let data5 = data.externalUrl;
                     const _errs24 = errors;
-                    if (typeof data.externalUrl !== \\"string\\") {
-                      validate10.errors = [
-                        {
-                          instancePath: instancePath + \\"/externalUrl\\",
-                          schemaPath: \\"#/properties/externalUrl/type\\",
-                          keyword: \\"type\\",
-                          params: { type: \\"string\\" },
-                          message: \\"must be string\\",
-                        },
-                      ];
-                      return false;
+                    if (typeof data5 !== \\"string\\") {
+                      let dataType9 = typeof data5;
+                      let coerced9 = undefined;
+                      if (!(coerced9 !== undefined)) {
+                        if (dataType9 == \\"number\\" || dataType9 == \\"boolean\\") {
+                          coerced9 = \\"\\" + data5;
+                        } else if (data5 === null) {
+                          coerced9 = \\"\\";
+                        } else {
+                          validate10.errors = [
+                            {
+                              instancePath: instancePath + \\"/externalUrl\\",
+                              schemaPath: \\"#/properties/externalUrl/type\\",
+                              keyword: \\"type\\",
+                              params: { type: \\"string\\" },
+                              message: \\"must be string\\",
+                            },
+                          ];
+                          return false;
+                        }
+                      }
+                      if (coerced9 !== undefined) {
+                        data5 = coerced9;
+                        if (data !== undefined) {
+                          data[\\"externalUrl\\"] = coerced9;
+                        }
+                      }
                     }
                     var valid0 = _errs24 === errors;
                   } else {
@@ -445,18 +614,38 @@ function validate10(
                   }
                   if (valid0) {
                     if (data.message !== undefined) {
+                      let data6 = data.message;
                       const _errs26 = errors;
-                      if (typeof data.message !== \\"string\\") {
-                        validate10.errors = [
-                          {
-                            instancePath: instancePath + \\"/message\\",
-                            schemaPath: \\"#/properties/message/type\\",
-                            keyword: \\"type\\",
-                            params: { type: \\"string\\" },
-                            message: \\"must be string\\",
-                          },
-                        ];
-                        return false;
+                      if (typeof data6 !== \\"string\\") {
+                        let dataType10 = typeof data6;
+                        let coerced10 = undefined;
+                        if (!(coerced10 !== undefined)) {
+                          if (
+                            dataType10 == \\"number\\" ||
+                            dataType10 == \\"boolean\\"
+                          ) {
+                            coerced10 = \\"\\" + data6;
+                          } else if (data6 === null) {
+                            coerced10 = \\"\\";
+                          } else {
+                            validate10.errors = [
+                              {
+                                instancePath: instancePath + \\"/message\\",
+                                schemaPath: \\"#/properties/message/type\\",
+                                keyword: \\"type\\",
+                                params: { type: \\"string\\" },
+                                message: \\"must be string\\",
+                              },
+                            ];
+                            return false;
+                          }
+                        }
+                        if (coerced10 !== undefined) {
+                          data6 = coerced10;
+                          if (data !== undefined) {
+                            data[\\"message\\"] = coerced10;
+                          }
+                        }
                       }
                       var valid0 = _errs26 === errors;
                     } else {
