@@ -23,6 +23,12 @@
 	"keywords": [],
 	"author": "Michał Miszczyszyn <michal@mmiszy.pl> (https://typeofweb.com/)",
 	"license": "ISC",
+	"packageManager": "pnpm@9.15.0",
+	"engines": {
+		"npm": ">=10.0.0 <11.0.0",
+		"node": ">=20.0.0 <23.0.0",
+		"pnpm": ">=9.0.0 <10.0.0"
+	},
 	"devDependencies": {
 		"@types/figlet": "1.5.6",
 		"@types/node": "20.3.1",
@@ -47,7 +53,8 @@
 		"ajv-formats": "2.1.1",
 		"commander": "11.0.0",
 		"figlet": "1.6.0",
-		"json-schema-to-typescript": "13.0.2"
+		"json-schema-to-typescript": "13.0.2",
+		"pnpm": "9.15.0"
 	},
 	"publishConfig": {
 		"access": "public"
