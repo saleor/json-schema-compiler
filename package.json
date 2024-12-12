@@ -21,7 +21,7 @@
 		"prepublishOnly": "pnpm clean && pnpm build"
 	},
 	"keywords": [],
-	"author": "Michał Miszczyszyn <michal@mmiszy.pl> (https://typeofweb.com/)",
+	"author": "Saleor Commerce <hello@saleor.io>",
 	"license": "ISC",
 	"devDependencies": {
 		"@types/figlet": "1.5.6",
